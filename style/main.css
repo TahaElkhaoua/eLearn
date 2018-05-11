@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'TheBoldFont';
+  src : url('../fonts/theboldfont.ttf');
+}
+
+input:focus, button:focus {
+  outline-width: 0;
+}
+
+body {
+  width : 100%;
+  height : 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 428px;
+  min-height: 600px;
+  overflow: hidden;
+}
+#mainPage{
+  /*  filter: blur(13.5px);
+    transform: scale(1.1);
+  */
+
+  z-index: 1;
+  min-height: 600px;
+  height: 100%;
+  width: 100%;
+  min-width: 500px;
+  overflow: hidden;
+  background: url('../img/landing/bg.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+#mainPage > navbar {
+  text-shadow: 2px 5px 5px rgba(16, 16, 16, .5);
+  min-width: 500px;
+  font-family : 'Lato', sans-serif;
+}
+
+#mainPage navbar a {
+  width: 280px;
+  display: inline;
+  font-size: 30.81pt;
+  color: white;
+  text-decoration: none;
+}
+
+#mainPage .categories-toggle {
+  margin-left: 100px;
+  display: inline;
+  height: 25px;
+  width: 41px;
+  background: url('../img/landing/cat-bg.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+#mainPage navbar div {width:150px;}
+#mainPage navbar div , #mainPage navbar div a{
+  margin-top: 20px;
+  color: white;
+  font-size: 16pt;
+  text-decoration: none;
+}
+
+#mainPage navbar div a:nth-child(even) {
+  color: #d0456c;
+}
+
+#search {
+  text-shadow: 2px 5px 5px rgba(16, 16, 16, .5);
+  min-height: 50%;
+}
+#search  div{
+  letter-spacing: 5px;
+  font-family: 'TheBoldFont', 'Lato', 'sans-serif';
+  color: white;
+  font-size: 90.62pt;
+}
+#search  div p {
+  letter-spacing: normal;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 19pt;
+  font-weight: 400;
+}
+#search div input:nth-child(odd) {
+  width : 450px;
+  margin-left: calc(50% - 225px);
+  padding-left: 20px;
+  border-radius: 30px;
+  border: none;
+  height : 65px;
+  color: #154352;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 18pt;
+  box-shadow: 2px 5px 5px rgba(16, 16, 16, .5);
+}
+#search div input:nth-child(even) {
+  height: 30px;
+  width: 30px;
+  border: none;
+  font-weight: 300;
+  background: url('../img/landing/search.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: calc(50% + 175px);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#lastPageToggle button{
+  box-shadow: 0px 0px 5px rgba(16, 16, 16, .3);
+  margin-top: -100px;
+  cursor: pointer;
+  width: 25px;
+  height: 49px;
+  border : none;
+  background: url('../img/landing/thingy.png') no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+#lastPageToggle button img {
+  border-radius: 100%;
+  width: 100%;
+  box-shadow: 0px 0px 5px rgba(16, 16, 16, .5);
+  margin-left: 0px;
+  margin-top: -18px;
+}
+
+#navigator a{
+  position: absolute;
+  top: calc(50%);
+  left: calc(100% - 80px);
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background: none;
+  border: 1px solid white;
+  z-index: 4;
+}
+#navigator #one {
+  margin-top: -15px;
+  background: white;
+}
+#navigator #two {
+  margin-top: 15px;
+}
+#navigator #three {
+  margin-top: 30px;
+  display: none;
+}
+
+#categories {
+  z-index: 5;
+  width : 100%;
+  height: 100%;
+  top: -25px;
+  left: -25px;
+  position: absolute;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, .47);
+}
+#categories button{
+  margin-top: 30px;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 100%;
+  background: #ae3d5d;
+  cursor: pointer;
+  box-shadow: 0px 0px 30px #ae3d5d;
+}
+#categories div{opacity: 0}
+#categories .item{width:100%;overflow: hidden;margin-bottom: 30px;}
+#categories .item img{
+  width: 107px;
+  height: 107px;
+  margin-left: calc(50% - 58.5px);
+  border-radius: 100%;
+  cursor: pointer;
+}
+#categories h3 {
+  cursor: pointer;
+  margin: 15px;
+  font-family: 'Lato';
+  font-weight: 900;
+  color: white;
+  font-size: 25pt;
+}
+#categories p{
+  font-family: 'Lato';
+  font-weight: 400;
+  color: white;
+  font-size: 13pt;
+}
+
+
+@media screen and (max-width: 1280px) {
+  #search  div:nth-child(odd){
+      font-size: 70pt;
+  }
+}
+@media screen and (max-width: 768px) {
+  #search  div:nth-child(odd){
+      font-size: 40pt;
+  }
+  #search  div:nth-child(odd) p{
+      font-size: 15pt;
+  }
+  #mainPage .categories-toggle {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 531px) {
+  #search div input:nth-child(even) {
+    margin-top: -45px;
+  }
+  navbar div {
+    margin-left: 500;
+  }
+}
