@@ -13,10 +13,10 @@
   <section id="mainPage" class="d-flex flex-column justify-content-between">
     <navbar class="navbar  pt-4 navbar-light d-flex flex-row justify-content-around">
       <button class="ml-5 categories-toggle mt-3"></button>
-      <a class="ml-4 d-none d-md-block"  href="#">LOREM IPSUM</a>
+      <a class="ml-4 d-none d-md-block"  href="index.html">LOREM IPSUM</a>
       <div class="ml-auto ml-md-0">
-        <a class="" href="#">log in</a>&nbsp;&nbsp;|&nbsp;
-        <a class="" href="#">sign up</a>
+        <a class="" id="login" href="#">log in</a>&nbsp;&nbsp;|&nbsp;
+        <a class="" id="signup" href="#">sign up</a>
       </div>
   </navbar>
 
@@ -29,7 +29,7 @@
     </div>
   <div>
 
-  <form action="#">
+  <form action="#" id="searchForm">
     <input type="text" class="" placeholder="What are you looking for ..." />
     <input type="submit" value="">
   </form>
@@ -118,11 +118,273 @@
   </section>
 
 
+  <section id="contactUs" class="d-flex flex-row">
+      <div id="leftMenu" class="">
+        <div id="team">
+            <div class="member">
+              <img src="img/contactUs/pic.png" alt="">
+              <div>
+                <h3>JHON DOE</h3>
+                CEO & FOUNDER
+              </div>
+              <div>
+                 <p class="d-block">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat .</p>
+              </div>
+            </div>
+
+            <div class="member">
+              <img src="img/contactUs/pic2.png" alt="">
+              <div>
+                <h3>JHON DOE</h3>
+                DESIGNER
+              </div>
+              <div>
+                 <p class="d-block">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat .</p>
+              </div>
+            </div>
+
+            <div class="member">
+              <img src="img/contactUs/pic3.png" alt="">
+              <div>
+                <h3>JANE DOE</h3>
+                MARKETER
+              </div>
+              <div>
+                 <p class="d-block">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat .</p>
+              </div>
+            </div>
+
+            <div class="member">
+              <img src="img/contactUs/pic4.png" alt="">
+              <div>
+                <h3>JHON DOE</h3>
+                DEVELOPER
+              </div>
+              <div>
+                 <p class="d-block">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat .</p>
+              </div>
+            </div>
+
+        </div>
+
+      <div id="content" class="d-none d-md-block">
+          <h3>LOREM IPSUM</h3>
+          <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+          <img src="img/contactUs/stuff.png" alt="">
+      </div>
+
+      </div>
+  </section>
+
+  <section id="loginPage" class="d-flex flex-column align-items-center justify-content-center">
+    <div id="loginContent" class=" text-center d-flex flex-column justify-content-between">
+      <h3>LOG IN</h3>
+      <form action="">
+      <div class="form-group">
+        E-Mail
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        Password
+        <input type="password" class="form-control">
+      </div>
+      </form>
+      <div id="btn">
+          <a href="" onclick="return false;" id="loginClose">GO BACK</a>
+        <button type="submit">Log in</button>
+      </div>
+    </div>
+  </section>
+
+
+    <section id="signupPage" class="d-flex flex-column align-items-center justify-content-center">
+      <div id="signContent" class=" text-center d-flex flex-column justify-content-between">
+        <h3>SIGN UP</h3>
+        <form action="">
+        <div class="form-group">
+          E-Mail
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          Full Name
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          Profession
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          Password
+          <input type="password" class="form-control">
+        </div>
+        </form>
+        <div id="btn">
+            <a href="" onclick="return false;" id="signupClose">GO BACK</a>
+          <button type="submit">Sign Up</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="searchPage">
+          <div id="searchPageItems">
+
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+            <div id="searchItem" class=" d-flex flex-row justify-content-between">
+              <div id="box"></div>
+              <div id="text">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</p>
+              </div>
+              <div id="level">
+                <p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p>
+                <p>Language&nbsp;&nbsp;&nbsp;<span>English</span></p>
+                <p>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>36h</span></p>
+                <p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                  <img src="img/search/star.png" alt="">
+                </span></p>
+              </div>
+            </div>
+
+
+
+          </div>
+    </section>
+
+
   <div id="navigator" class="d-none d-md-block">
     <a id="one" href="#"></a>
     <a id="two" href="#"></a>
     <a id="three" href="#"></a>
   </div>
+
 
     <!--        JAVASCRIPT AREA-->
     <script
