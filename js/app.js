@@ -220,9 +220,9 @@ var status = 0;
     }
 
   });
+  $('#lastPageToggle').on('click', function(){toggler.togglePage();});
 
   $('#navigator').on('click', function(){toggler.togglePage();});
-  $('#lastPageToggle').on('click', function(){toggler.togglePage();});
 
   $('#login').on('click', function(){
     login.togglePage();
@@ -239,7 +239,27 @@ var status = 0;
   });
 
   $('#searchForm').on('submit', function(){
-    search.toggle();
+
+    var keyword = $("#searchKeyword").val();
+    var xml = new XMLHttpRequest();
+    xml.open("GET", "includes/search_videos.php?keyword=" + keyword, true);
+    xml.onreadystatechange = function(){
+      if(xml.status == 200 && xml.readyState == 4){
+        $("#searchPageItems").html("");
+          if(xml.response.length === 0){
+          }else {
+            var Objects = JSON.parse(xml.response);
+            Objects.forEach(function(element){
+              var Div = '<div id="searchItem" class=" d-flex flex-row justify-content-between"><div id="box"></div><div id="text"><h3>'+ element["title"] +'</h3><p>'+ element["description"] +'<br/><p>Categorie&nbsp;&nbsp;&nbsp;<span>'+ element["categorie"] +'<br><a href="course.php?id='+ element["id"] +'">CONTINUE TO COURSE</a></p></div><div id="level"><p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p></span></p><p>Creator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>'+ element["uploader"] +'</span></p><p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="img/search/star.png" alt=""><img src="img/search/star.png" alt=""><img src="img/search/star.png" alt=""><img src="img/search/star.png  " alt=""></span></p></div></div>';
+              $("#searchPageItems").html($("#searchPageItems").html()+Div);
+            });
+          }
+          search.toggle();
+      }
+    };
+    xml.send();
+
+
     return false;
   });
 
@@ -248,6 +268,26 @@ var status = 0;
   });
 
 $("#categories h3, #categories .item img").on('click', function(){
+  var keyword = ($(this).parent().children("h3").html());
+  var xml = new XMLHttpRequest();
+  xml.open("GET", "includes/search_videos_cat.php?keyword=" + keyword, true);
+  xml.onreadystatechange = function(){
+    if(xml.status == 200 && xml.readyState == 4){
+      $("#searchPageItems").html("");
+        if(xml.response.length === 0){
+        }else {
+          var Objects = JSON.parse(xml.response);
+          Objects.forEach(function(element){
+            var Div = '<div id="searchItem" class=" d-flex flex-row justify-content-between"><div id="box"></div><div id="text"><h3>'+ element["title"] +'</h3><p>'+ element["description"] +'<br/><p>Categorie&nbsp;&nbsp;&nbsp;<span>'+ element["categorie"] +'<br><a href="course.php?id='+ element["id"] +'">CONTINUE TO COURSE</a></p></div><div id="level"><p>Level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Beginner</span></p></span></p><p>Creator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>'+ element["uploader"] +'</span></p><p>Score&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><img src="img/search/star.png" alt=""><img src="img/search/star.png" alt=""><img src="img/search/star.png" alt=""><img src="img/search/star.png  " alt=""></span></p></div></div>';
+            $("#searchPageItems").html($("#searchPageItems").html()+Div);
+          });
+        }
+        search.toggle();
+    }
+  };
+  xml.send();
+
+
 
   $('#categories div').fadeTo("fast", 0);
   $('#mainPage').css({"filter": "blur(0px)", "transform" : "scale(1)"});
@@ -270,5 +310,61 @@ $("#categories h3, #categories .item img").on('click', function(){
 
 
 });
+
+
+    $("#submitSignup").click(function(){
+        var email = document.getElementById("signupEmail").value;
+        var name = document.getElementById("signupName").value;
+        var profession = document.getElementById("signupProfession").value;
+        var password = document.getElementById("signupPassword").value;
+
+        var xml = new XMLHttpRequest();
+        xml.open("GET", "includes/insert_user.php?email="+email+"&name="+name+"&profession="+profession+"&password="+password, true);
+        xml.onreadystatechange = function(){
+          if(xml.status == 200 && xml.readyState == 4){
+            if(xml.response != "success"){
+              alert("ERROR");
+            }
+            window.location.replace("index.php");
+          }
+        };
+
+        xml.send();
+
+    });
+
+    $("#submitLogin").click(function(){
+      var email = document.getElementById("loginEmail").value;
+      var password = document.getElementById("loginPassword").value;
+
+      var xml = new XMLHttpRequest();
+      xml.open("GET", "includes/connect_user.php?email="+email+"&password="+password, true);
+      xml.onreadystatechange = function(){
+        if(xml.status == 200 && xml.readyState == 4){
+          if(xml.response != "success"){
+            alert("User not found or Password Incorrect!!!");
+          }else {
+            window.location.replace("index.php");
+          }
+
+        }
+      };
+
+      xml.send();
+    });
+
+    $("#logout").click(function(){
+      var xml = new XMLHttpRequest();
+      xml.open("GET", "includes/logout.php", true);
+      xml.onreadystatechange = function(){
+        if(xml.status == 200 && xml.readyState == 4){
+            window.location.replace("index.php");
+        }
+      };
+      xml.send();
+    });
+
+
+  
 
 })();

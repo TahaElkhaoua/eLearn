@@ -112,7 +112,9 @@ body {
   cursor: pointer;
 }
 
+
 #lastPageToggle button{
+  z-index: 6;
   box-shadow: 0px 0px 5px rgba(16, 16, 16, .3);
   margin-top: -100px;
   cursor: pointer;
