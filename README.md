@@ -5,4 +5,5 @@ before using the website you need to Create a database by the name : "eLearn".
   ./includes/connection.php
   
   
-  
+#IMPORTANT
+You need to Edit PHP.INI to support uploading large Sized Videos.
